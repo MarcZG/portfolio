@@ -119,6 +119,10 @@ section{padding:clamp(80px,12vh,170px) clamp(18px,4vw,52px)}
 #darte .card .ph{padding:clamp(8px,3%,18px)}
 #darte .card .ph img{object-fit:contain}
 #darte .card .ct{display:none}
+/* En modo oscuro: fondo blanco bajo los logos que no se verían (no afecta al cartel) */
+body[data-theme="dark"] #darte .card[data-proj="cocoa"],
+body[data-theme="dark"] #darte .card[data-proj="canroqueta"],
+body[data-theme="dark"] #darte .card[data-proj="winrar"]{background:#fff;border-radius:8px}
 
 /* lista (Tecnología) */
 .rows{margin-top:clamp(30px,5vh,54px)}
