@@ -209,6 +209,7 @@ footer{padding:18px clamp(18px,4vw,52px);border-top:1px solid var(--line);displa
   /* >>> TU FOTO: añade aquí  background-image:url('tu-foto.jpg');background-size:cover;background-position:center;  <<< */
   display:flex;align-items:center;justify-content:center}
 .about-photo span{font-family:"Space Mono",monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.66rem;color:rgba(255,255,255,.92);text-align:center;padding:0 16px;line-height:1.6}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:760px){
   .about-grid{grid-template-columns:1fr}
   .about-photo{max-width:320px;order:-1;justify-self:start;margin-top:0}
@@ -249,7 +250,7 @@ footer{padding:18px clamp(18px,4vw,52px);border-top:1px solid var(--line);displa
 nav .lang{display:flex;align-items:center}
 
 /* ===== SUBPÁGINAS DE PROYECTO ===== */
-.proj{position:fixed;inset:0;z-index:9700;background:var(--cal);color:var(--ink);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .4s}
+.proj{position:fixed;inset:0;z-index:9700;background:var(--cal);color:var(--ink);overflow-y:auto;overscroll-behavior:contain;opacity:0;visibility:hidden;transition:opacity .4s}
 .proj.open{opacity:1;visibility:visible}
 .proj-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;
   padding:16px clamp(18px,4vw,52px);background:rgba(244,239,230,.85);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid rgba(20,17,14,.12)}
@@ -428,7 +429,7 @@ nav .lang{display:flex;align-items:center}
       </div>
      </div>
      <div class="about-photo">
-       <span data-i18n="about_photo"><img src="./public/FOTO-PORTFOLIO.jpg" alt="Mi foto de perfil"></span>
+       <img src="./public/FOTO-PORTFOLIO.jpg" alt="Mi foto de perfil">
      </div>
     </div>
   </section>
@@ -960,8 +961,9 @@ if(window.Lenis&&window.gsap){
     barName.textContent=p.title; render(p); overlay.scrollTop=0;
     overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
     if(lenis) lenis.stop();
+    document.documentElement.style.overflow='hidden';
   }
-  function close(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); if(lenis) lenis.start(); }
+  function close(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); document.documentElement.style.overflow=''; if(lenis) lenis.start(); }
   document.getElementById('proj-close').addEventListener('click',close);
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&overlay.classList.contains('open')) close(); });
   document.addEventListener('langchange',()=>{ if(current && overlay.classList.contains('open')) render(current); });
