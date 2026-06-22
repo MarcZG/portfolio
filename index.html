@@ -263,6 +263,11 @@ nav .lang{display:flex;align-items:center}
 .proj-meta{font-family:"Space Mono",monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:#7C7363;margin-bottom:clamp(28px,5vh,56px)}
 .proj-block{margin:clamp(18px,3.5vh,36px) 0}
 .proj-block p{font-size:1.12rem;line-height:1.7;max-width:62ch;color:#2c271f}
+.proj-h{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;font-size:1.05rem;color:#14110E;margin:clamp(28px,5vh,48px) 0 0;max-width:62ch}
+.proj-h + .proj-block{margin-top:6px}
+.proj-list{max-width:62ch;margin:8px 0 0;padding-left:1.15em;color:#2c271f;font-size:1.05rem;line-height:1.7}
+.proj-list li{margin:.25em 0}
+.proj-list li::marker{color:var(--accent,#C9522E)}
 .proj-media{width:100%;border-radius:6px;overflow:hidden;background:linear-gradient(135deg,#d8cfc0,#b3a999);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
 .proj-media img,.proj-media video{width:100%;height:100%;object-fit:cover;display:block}
 .proj-media .ph{font-family:"Space Mono",monospace;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:#fff;text-align:center;padding:0 12px}
@@ -392,7 +397,7 @@ nav .lang{display:flex;align-items:center}
       <a class="row" href="#" data-cursor data-proj="scrolly"><span class="idx">01</span><span class="name">Scrollytelling Studio</span><span class="meta">Editor · HTML</span><span class="meta">2025</span><span class="arrow">→</span></a>
       <a class="row" href="#" data-cursor data-proj="ficha"><span class="idx">02</span><span class="name">Ficha — Time Tracking</span><span class="meta">Firebase · App</span><span class="meta">2025</span><span class="arrow">→</span></a>
       <a class="row soon" href="#" aria-disabled="true" data-proj="portfolio"><span class="idx">03</span><span class="name">Portfolio 3D web</span><span class="meta">Three.js · WebGL</span><span class="meta">2024</span><span class="meta soon-tag" data-i18n="soon">Próximamente</span></a>
-      <a class="row soon" href="#" aria-disabled="true" data-proj="godot"><span class="idx">04</span><span class="name">SEO — Archviz Mallorca</span><span class="meta">Google · Analytics</span><span class="meta">2024</span><span class="meta soon-tag" data-i18n="soon">Próximamente</span></a>
+      <a class="row" href="#" data-cursor data-proj="godot"><span class="idx">04</span><span class="name">SEO — Archviz Mallorca</span><span class="meta">SEO · GEO</span><span class="meta">2024</span><span class="arrow">→</span></a>
     </div>
   </section>
 
@@ -911,12 +916,29 @@ if(window.Lenis&&window.gsap){
       {es:'Carteles interactivos, avisos por proximidad y estética claymation.',en:'Interactive signs, proximity prompts and a claymation aesthetic.'},
       {img:''}
     ]},
-    godot:{blocks:[
-      {es:'Juego en Godot 4 con modelos propios y editor de terreno por chunks con persistencia en JSON.',en:'Godot 4 game with custom models and a chunk-based terrain editor with JSON persistence.'},
-      {img:''},
-      {img:''},
-      {img:''},
-      {row:['','']}
+    godot:{title:'SEO & GEO — Archviz Mallorca', blocks:[
+      'Todo empieza con un problema concreto: un estudio de visualización arquitectónica de lujo en Palma de Mallorca con un portfolio excepcional pero invisible en Google para búsquedas en inglés y español.',
+      {h:'Punto de partida'},
+      'Buscando "architecture renders Mallorca" o "mejores renders de arquitectura en Mallorca", Archviz Mallorca aparecía enterrado en la página 4 y 5 de Google. La razón: la web estaba 100% en inglés, sin contenido optimizado para búsquedas locales, sin Schema markup, sin versión española y con errores técnicos acumulados.',
+      {img:'./public/busqueda de googleversion antigua.png'},
+      {img:'./public/busqueda de googleversion antigua1.png'},
+      {h:'1 Mes después'},
+      'Las mismas búsquedas, el mismo navegador, resultados completamente diferentes. Archviz Mallorca aparece ahora en primera página para ambas keywords, por encima de competidores con años de ventaja.',
+      {img:'./public/busqueda-google.png'},
+      {img:'./public/busqueda de google1.png'},
+      'Lo que lo hizo posible:',
+      {list:[
+        'Activación del multilenguaje español con hreflang',
+        'Optimización de meta titles y descriptions en inglés y español',
+        'Implementación de Schema LocalBusiness en JSON-LD',
+        'Corrección de 7 errores 404',
+        'Configuración de llms.txt bilingüe para visibilidad en IAs'
+      ]},
+      {h:'Más allá de Google — visibilidad en IAs generativas'},
+      'El SEO tradicional ya no es suficiente. Cada vez más personas preguntan directamente a ChatGPT o Perplexity en lugar de buscar en Google. Con la implementación del llms.txt optimizado y el Schema markup correcto, Archviz Mallorca aparece hoy como estudio recomendado en primera posición en ambas plataformas — sin publicidad, sin sesión iniciada, resultado orgánico puro.',
+      'En ChatGPT aparece en el mapa con valoración de 5 estrellas y descrito como "uno de los estudios más especializados en visualización arquitectónica de alto nivel en la isla". En Perplexity, mencionado en primer lugar entre los mejores estudios de Mallorca.',
+      {img:'./public/chatgpt-busqueda.png'},
+      {img:'./public/perplexity.png'}
     ]}
   };
 
@@ -927,6 +949,8 @@ if(window.Lenis&&window.gsap){
   function txt(b){ return typeof b==='string' ? b : (b[lang]||b.es||b.en||''); }
   function block(b){
     if(typeof b==='string' || b.es!==undefined || b.en!==undefined) return '<div class="proj-block"><p>'+esc(txt(b))+'</p></div>';
+    if(b.h!==undefined) return '<h3 class="proj-h">'+esc(typeof b.h==='string'?b.h:(b.h[lang]||b.h.es||b.h.en||''))+'</h3>';
+    if(b.list) return '<ul class="proj-list">'+b.list.map(it=>'<li>'+esc(typeof it==='string'?it:(it[lang]||it.es||it.en||''))+'</li>').join('')+'</ul>';
     if(b.video!==undefined) return '<div class="proj-block">'+(b.video
       ? '<video class="proj-img" src="'+esc(b.video)+'" autoplay muted loop playsinline controls preload="metadata"></video>'
       : '<div class="proj-media"><span class="ph">'+PH_VID+'</span></div>')+'</div>';
