@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estudio Nara · Peluquería en Palma</title>
 <meta name="description" content="Estudio Nara, salón de peluquería en Palma. Corte, color y tratamientos con cita previa, en un espacio tranquilo pensado para ti.">
@@ -121,5 +122,23 @@ footer{padding:3rem 1.5rem;text-align:center;font-size:.75rem;letter-spacing:.15
 </section>
 
 <footer>estudio nara · palma de mallorca · [TELÉFONO]</footer>
+
+<!-- Volver a la galería -->
+<style>
+.volver-galeria{position:fixed;left:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:0;
+  height:52px;padding:0 15px;border-radius:100px;background:rgba(20,17,14,.82);color:#F4EFE6;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 8px 24px rgba(0,0,0,.25);
+  font-family:Arial,Helvetica,sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;transition:gap .3s ease,padding .3s ease,background .3s ease;overflow:hidden;white-space:nowrap}
+.volver-galeria svg{width:20px;height:20px;flex:none}
+.volver-galeria span{max-width:0;opacity:0;overflow:hidden;transition:max-width .35s ease,opacity .25s ease}
+.volver-galeria:hover{gap:9px;padding:0 19px;background:rgba(20,17,14,.95)}
+.volver-galeria:hover span{max-width:90px;opacity:1}
+@media (hover:none){.volver-galeria{gap:9px;padding:0 19px}.volver-galeria span{max-width:90px;opacity:1}}
+</style>
+<a class="volver-galeria" href="../" aria-label="Volver a la galería">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span>Galería</span>
+</a>
 </body>
 </html>
