@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ca'n Fonoll · Cocina mallorquina en Palma</title>
+<meta name="description" content="Ca'n Fonoll, restaurante de cocina mallorquina de mercado en el centro de Palma. Producto local, recetas de siempre y vino de la isla. Reserva tu mesa.">
+<meta property="og:title" content="Ca'n Fonoll · Cocina mallorquina en Palma">
+<meta property="og:description" content="Producto local, recetas de siempre y vino de la isla, en el centro de Palma.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#3a4a32;--verde-osc:#28331f;--crema:#faf6ec;--azafran:#c97b2d;--tinta:#22261e}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;color:var(--tinta);background:var(--crema);line-height:1.6}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;line-height:1.15}
+a{color:inherit;text-decoration:none}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--crema);border-bottom:1px solid rgba(58,74,50,.15);padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Fraunces',serif;font-size:1.35rem;color:var(--verde)}
+nav{display:flex;gap:1.25rem;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+nav a{color:var(--verde)}
+nav a:hover{color:var(--azafran)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:7rem 1.25rem 4rem;background:linear-gradient(rgba(40,51,31,.78),rgba(40,51,31,.86)),url(https://images.unsplash.com/photo-1550293750-dde2bed30d54?q=80&w=1600&auto=format&fit=crop) center/cover no-repeat;color:var(--crema);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(250,246,236,.25)}
+.hero p.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:var(--azafran);margin-bottom:1rem;font-weight:700}
+.hero h1{font-size:clamp(2.4rem,7vw,4.5rem);max-width:14ch}
+.hero p.lead{margin:1.5rem 0 2.25rem;max-width:42ch;color:rgba(250,246,236,.85);font-size:1.1rem}
+.botones{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-azafran{background:var(--azafran);color:var(--crema)}
+.btn-borde{border:1px solid rgba(250,246,236,.5);color:var(--crema)}
+section{padding:4.5rem 1.25rem;max-width:1060px;margin:0 auto}
+.titulo-seccion{font-size:clamp(1.8rem,4.5vw,2.6rem);color:var(--verde);margin-bottom:.75rem}
+.subtitulo{color:rgba(34,38,30,.7);max-width:52ch;margin-bottom:2.5rem}
+.cartas{display:grid;gap:1.25rem;grid-template-columns:1fr}
+.carta{background:#fff;border:1px solid rgba(58,74,50,.12);border-radius:14px;padding:1.75rem;transition:transform .15s ease}
+.carta:hover{transform:translateY(-4px)}
+.carta .foto{height:170px;border-radius:10px;margin-bottom:1.25rem;overflow:hidden}
+.carta .foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.carta:hover .foto img{transform:scale(1.05)}
+.carta h3{color:var(--verde);font-size:1.25rem;margin-bottom:.5rem}
+.carta p{font-size:.95rem;color:rgba(34,38,30,.75)}
+.sobre{background:#fff}
+.sobre-inner{max-width:1060px;margin:0 auto;display:grid;gap:2.5rem;grid-template-columns:1fr}
+.sobre .foto-grande{border-radius:14px;overflow:hidden;min-height:260px}
+.sobre .foto-grande img{width:100%;height:100%;min-height:260px;object-fit:cover;display:block}
+.contacto-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+.dato{margin-bottom:1.1rem}
+.dato span{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;color:var(--azafran);font-weight:700;margin-bottom:.2rem}
+.dato a{font-weight:700;color:var(--verde)}
+.mapa{min-height:280px;border-radius:14px;background:#e8e3d5;border:1px dashed rgba(58,74,50,.35);display:flex;align-items:center;justify-content:center;color:rgba(34,38,30,.5);font-size:.85rem;text-align:center;padding:1rem}
+footer{background:var(--verde-osc);color:rgba(250,246,236,.75);padding:2.5rem 1.25rem;text-align:center;font-size:.85rem}
+footer .logo{color:var(--crema);display:block;margin-bottom:.5rem}
+@media(min-width:760px){
+.cartas{grid-template-columns:repeat(3,1fr)}
+.sobre-inner{grid-template-columns:1fr 1fr;align-items:center}
+.contacto-grid{grid-template-columns:1fr 1.2fr}
+}
+@media(max-width:560px){nav a:not(:last-child){display:none}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#inicio">Ca'n Fonoll</a>
+<nav>
+<a href="#carta">La carta</a>
+<a href="#sobre">La casa</a>
+<a href="#contacto">Reservas</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio" style="max-width:none">
+<p class="eyebrow">Cocina mallorquina de mercado · Palma</p>
+<h1>La isla, servida en la mesa</h1>
+<p class="lead">Producto de payés, pescado de la lonja y recetas que llevan generaciones en Mallorca. Un comedor pequeño en el centro de Palma donde se come sin prisa.</p>
+<div class="botones">
+<a class="btn btn-azafran" href="https://wa.me/[TELÉFONO]">Reservar por WhatsApp</a>
+<a class="btn btn-borde" href="tel:[TELÉFONO]">Llamar al restaurante</a>
+</div>
+</section>
+
+<section id="carta">
+<h2 class="titulo-seccion">Lo que sale de nuestra cocina</h2>
+<p class="subtitulo">La carta cambia con el mercado, pero hay cosas que nunca faltan.</p>
+<div class="cartas">
+<article class="carta">
+<div class="foto"><img loading="lazy" src="https://images.unsplash.com/photo-1672636401296-72fefd00e745?q=80&w=800&auto=format&fit=crop" alt="Plato de arroz mallorquín"></div>
+<h3>Arroces y guisos</h3>
+<p>Arròs brut, frito mallorquín y guisos de temporada hechos a fuego lento, como en casa.</p>
+</article>
+<article class="carta">
+<div class="foto"><img loading="lazy" src="https://images.unsplash.com/photo-1672636401225-ec3d4025a4af?q=80&w=800&auto=format&fit=crop" alt="Plato de marisco y pescado fresco"></div>
+<h3>Pescado de lonja</h3>
+<p>Lo que entra cada mañana en la lonja de Palma: a la plancha, al horno o en caldereta.</p>
+</article>
+<article class="carta">
+<div class="foto"><img loading="lazy" src="https://images.unsplash.com/photo-1672636401285-de70649497de?q=80&w=800&auto=format&fit=crop" alt="Copa de vino con plato mediterráneo"></div>
+<h3>Vinos de la isla</h3>
+<p>Bodega corta y honesta, con especial cariño por los vinos de Binissalem y Pla i Llevant.</p>
+</article>
+</div>
+</section>
+
+<section class="sobre" id="sobre" style="max-width:none">
+<div class="sobre-inner">
+<div class="foto-grande"><img loading="lazy" src="https://images.unsplash.com/photo-1705648341120-666923f8b675?q=80&w=1000&auto=format&fit=crop" alt="Comedor del restaurante"></div>
+<div>
+<h2 class="titulo-seccion">Una casa de comidas de toda la vida</h2>
+<p>Ca'n Fonoll abrió sus puertas como celler familiar y hoy sigue en las mismas manos. Cocinamos lo que da la isla, sin inventos raros: producto bueno, tratado con respeto y servido con calma. Si es tu primera vez, déjate aconsejar.</p>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<h2 class="titulo-seccion">Reservas y contacto</h2>
+<p class="subtitulo">Grupos grandes mejor por teléfono. Para el día a día, WhatsApp funciona de maravilla.</p>
+<div class="contacto-grid">
+<div>
+<div class="dato"><span>Teléfono</span><a href="tel:[TELÉFONO]">[TELÉFONO]</a></div>
+<div class="dato"><span>WhatsApp</span><a href="https://wa.me/[TELÉFONO]">Escríbenos</a></div>
+<div class="dato"><span>Dirección</span>[DIRECCIÓN]</div>
+<div class="dato"><span>Horario</span>[HORARIO]</div>
+</div>
+<div class="mapa">Aquí va el iframe de Google Maps</div>
+</div>
+</section>
+
+<footer>
+<span class="logo">Ca'n Fonoll</span>
+[DIRECCIÓN] · Palma de Mallorca · <a href="tel:[TELÉFONO]">[TELÉFONO]</a>
+</footer>
+</body>
+</html>

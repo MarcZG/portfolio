@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taller Bennàssar · Mecánica y mantenimiento en Palma</title>
+<meta name="description" content="Taller Bennàssar en Palma: mecánica general, diagnosis, neumáticos y pre-ITV. Presupuesto sin compromiso y coche listo cuando se promete.">
+<meta property="og:title" content="Taller Bennàssar · Mecánica en Palma">
+<meta property="og:description" content="Mecánica general, diagnosis, neumáticos y pre-ITV en Palma. Presupuesto sin compromiso.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--carbon:#17191c;--acero:#23262b;--humo:#9aa0a8;--amarillo:#f5c518;--blanco:#f4f5f6}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Archivo',sans-serif;background:var(--carbon);color:var(--blanco);line-height:1.6}
+a{color:inherit;text-decoration:none}
+h1,h2{font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--carbon);border-bottom:2px solid var(--amarillo);padding:.9rem 1.25rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;text-transform:uppercase;font-size:1.05rem;letter-spacing:.02em}
+.logo span{color:var(--amarillo)}
+nav{display:flex;gap:1.25rem;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+nav a{color:var(--humo)}
+nav a:hover{color:var(--amarillo)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:7rem 1.25rem 4rem;position:relative;background:linear-gradient(rgba(23,25,28,.78),rgba(23,25,28,.92)),url(https://images.unsplash.com/photo-1632733711679-529326f6db12?q=80&w=1600&auto=format&fit=crop) center/cover no-repeat}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%}
+.franjas{width:140px;height:14px;margin-bottom:1.75rem;background:repeating-linear-gradient(-45deg,var(--amarillo) 0 10px,transparent 10px 20px)}
+.hero h1{font-size:clamp(2.6rem,9vw,5.5rem);max-width:12ch}
+.hero h1 span{color:var(--amarillo)}
+.hero p{margin:1.5rem 0 2.25rem;color:var(--humo);max-width:46ch;font-size:1.05rem}
+.botones{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.95rem 1.7rem;font-weight:800;text-transform:uppercase;font-size:.85rem;letter-spacing:.05em;transition:transform .12s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-amarillo{background:var(--amarillo);color:var(--carbon)}
+.btn-borde{border:2px solid var(--humo);color:var(--blanco)}
+section{padding:4.5rem 1.25rem;max-width:1100px;margin:0 auto}
+.eyebrow{color:var(--amarillo);font-weight:800;text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;margin-bottom:.75rem}
+h2{font-size:clamp(1.9rem,5vw,3rem);margin-bottom:2.25rem}
+.grid{display:grid;gap:1rem;grid-template-columns:1fr}
+.tarjeta{background:var(--acero);padding:1.75rem;border-left:4px solid var(--amarillo)}
+.tarjeta h3{font-weight:800;text-transform:uppercase;font-size:1rem;letter-spacing:.04em;margin-bottom:.6rem}
+.tarjeta p{color:var(--humo);font-size:.92rem}
+.sobre{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+.sobre .foto{min-height:260px;overflow:hidden;border:1px solid #33373d}
+.sobre .foto img{width:100%;height:100%;min-height:260px;object-fit:cover;display:block}
+.sobre p{color:var(--humo)}
+.contacto{display:grid;gap:2rem;grid-template-columns:1fr}
+.dato{margin-bottom:1.1rem}
+.dato span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--amarillo);font-weight:800;margin-bottom:.2rem}
+.dato a{font-weight:800}
+.dato a:hover{color:var(--amarillo)}
+.mapa{min-height:280px;background:var(--acero);border:1px dashed #4a4f57;display:flex;align-items:center;justify-content:center;color:var(--humo);font-size:.85rem;text-align:center;padding:1rem}
+footer{border-top:1px solid #2c3036;padding:2.5rem 1.25rem;text-align:center;color:var(--humo);font-size:.85rem}
+@media(min-width:760px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.sobre{grid-template-columns:1.1fr 1fr}
+.contacto{grid-template-columns:1fr 1.2fr}
+}
+@media(max-width:560px){nav a:not(:last-child){display:none}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#inicio">Taller <span>Bennàssar</span></a>
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#taller">El taller</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<div class="hero" id="inicio">
+<div class="hero-inner">
+<div class="franjas"></div>
+<h1>Tu coche, listo <span>cuando toca</span></h1>
+<p>Mecánica general, diagnosis electrónica y mantenimiento en Palma. Presupuesto cerrado antes de tocar nada y el coche entregado el día que te decimos. Así de simple.</p>
+<div class="botones">
+<a class="btn btn-amarillo" href="tel:[TELÉFONO]">Llamar al taller</a>
+<a class="btn btn-borde" href="https://wa.me/[TELÉFONO]">Pedir presupuesto</a>
+</div>
+</div>
+</div>
+
+<section id="servicios">
+<p class="eyebrow">Servicios</p>
+<h2>Qué hacemos</h2>
+<div class="grid">
+<div class="tarjeta"><h3>Mecánica general</h3><p>Frenos, embrague, distribución, suspensión. Reparación con recambio de calidad y garantía.</p></div>
+<div class="tarjeta"><h3>Diagnosis electrónica</h3><p>Equipos multimarca para localizar la avería sin cambiar piezas a ciegas.</p></div>
+<div class="tarjeta"><h3>Mantenimiento y pre-ITV</h3><p>Revisiones oficiales sin perder garantía de marca y puesta a punto antes de la ITV.</p></div>
+<div class="tarjeta"><h3>Neumáticos</h3><p>Montaje, equilibrado y alineado. Te avisamos cuando toca cambiarlos, no antes.</p></div>
+</div>
+</section>
+
+<section class="sobre" id="taller">
+<div>
+<p class="eyebrow">El taller</p>
+<h2>Trato directo, sin sorpresas</h2>
+<p>Somos un taller de barrio de los de siempre: te explicamos la avería con el coche delante, te damos el precio cerrado y no se toca nada sin tu visto bueno. La mayoría de nuestros clientes vienen recomendados, y eso se cuida.</p>
+</div>
+<div class="foto"><img loading="lazy" src="https://images.unsplash.com/photo-1643700973089-baa86a1ab9ee?q=80&w=1000&auto=format&fit=crop" alt="Mecánico trabajando en el taller"></div>
+</section>
+
+<section id="contacto">
+<p class="eyebrow">Contacto</p>
+<h2>Pásate o llámanos</h2>
+<div class="contacto">
+<div>
+<div class="dato"><span>Teléfono</span><a href="tel:[TELÉFONO]">[TELÉFONO]</a></div>
+<div class="dato"><span>WhatsApp</span><a href="https://wa.me/[TELÉFONO]">Pide presupuesto</a></div>
+<div class="dato"><span>Dirección</span>[DIRECCIÓN]</div>
+<div class="dato"><span>Horario</span>[HORARIO]</div>
+</div>
+<div class="mapa">Aquí va el iframe de Google Maps</div>
+</div>
+</section>
+
+<footer>Taller Bennàssar · [DIRECCIÓN] · Palma de Mallorca · <a href="tel:[TELÉFONO]">[TELÉFONO]</a></footer>
+</body>
+</html>

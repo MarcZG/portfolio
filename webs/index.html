@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Páginas web · Marc Oliver Orfila</title>
+<meta name="description" content="Ejemplos de páginas web para negocios locales: restaurante, peluquería y taller mecánico. Diseño web a medida por Marc Oliver Orfila.">
+<meta property="og:title" content="Páginas web · Marc Oliver Orfila">
+<meta property="og:description" content="Ejemplos de páginas web para negocios locales, hechas a medida.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marcoliverorfila.es/webs/">
+<link rel="icon" type="image/png" href="../portfolio/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14110E;--cal:#F4EFE6;--terra:#C9522E;--mar:#1577A6;--buga:#CF4F6F;--ocre:#D99A2B;
+  --muted:#7C6A5E;--line:rgba(20,17,14,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",sans-serif;background:var(--cal);color:var(--ink);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"Space Mono",monospace;text-transform:uppercase;letter-spacing:.14em}
+
+/* barra superior, como el portfolio */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+  padding:14px clamp(18px,4vw,52px);background:var(--cal);border-bottom:1px solid var(--line)}
+.topbar .brand{font-family:"Space Mono",monospace;font-weight:700;font-size:.8rem;letter-spacing:.08em}
+.topbar .brand sup{color:var(--terra)}
+.topbar .back{font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+.topbar .back:hover{color:var(--terra)}
+
+.wrap{max-width:1200px;margin:0 auto;padding:clamp(110px,16vh,160px) clamp(18px,4vw,52px) clamp(60px,9vh,100px)}
+.eyebrow{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:16px}
+h1{font-family:"Archivo",sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;
+  font-size:clamp(2.4rem,7.5vw,5.2rem);max-width:16ch}
+.intro{color:var(--muted);margin:clamp(20px,3.5vh,32px) 0 clamp(40px,7vh,72px);max-width:56ch;font-size:1.05rem}
+
+/* tarjetas, como las del portfolio */
+.demos{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.demo{display:block}
+.demo .frame{position:relative;aspect-ratio:4/3;border-radius:2px;overflow:hidden;isolation:isolate;
+  display:flex;align-items:flex-end;padding:18px}
+.demo .frame::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--img);background-size:cover;background-position:center;
+  transition:transform .7s cubic-bezier(.76,0,.24,1)}
+.demo:hover .frame::before{transform:scale(1.08)}
+.demo .tag{position:absolute;top:14px;left:14px;font-family:"Space Mono",monospace;font-size:.62rem;color:#fff;
+  text-transform:uppercase;letter-spacing:.12em;background:rgba(0,0,0,.32);padding:5px 9px;border-radius:100px;backdrop-filter:blur(3px)}
+.demo .name{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;color:#fff;
+  font-size:1.15rem;letter-spacing:-.01em;line-height:1;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.demo .info{padding:16px 2px 0}
+.demo .info p{color:var(--muted);font-size:.92rem;max-width:40ch}
+.demo .info .cta{display:inline-block;margin-top:10px;font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .25s,border-color .25s}
+.demo:hover .info .cta{color:var(--accent);border-color:var(--accent)}
+.demo.r{--img:linear-gradient(rgba(40,51,31,.35),rgba(40,51,31,.72)),url(https://images.unsplash.com/photo-1550293750-dde2bed30d54?q=80&w=900&auto=format&fit=crop);--accent:var(--ocre)}
+.demo.p{--img:linear-gradient(rgba(28,26,25,.15),rgba(28,26,25,.55)),url(https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=900&auto=format&fit=crop);--accent:var(--buga)}
+.demo.t{--img:linear-gradient(rgba(23,25,28,.45),rgba(23,25,28,.82)),url(https://images.unsplash.com/photo-1632733711679-529326f6db12?q=80&w=900&auto=format&fit=crop);--accent:var(--mar)}
+
+/* cta final */
+.aviso{margin-top:clamp(48px,8vh,84px);border-top:1px solid var(--line);padding-top:clamp(24px,4vh,40px);
+  display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:baseline}
+.aviso p{color:var(--muted);font-size:.9rem;max-width:52ch}
+.aviso a.cta{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;font-size:1rem;color:var(--terra);
+  white-space:nowrap;transition:transform .25s;display:inline-block}
+.aviso a.cta:hover{transform:translateX(6px)}
+
+footer{border-top:1px solid var(--line);padding:18px clamp(18px,4vw,52px);display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;color:var(--muted);font-family:"Space Mono",monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="brand" href="https://marcoliverorfila.es">MOO <sup>©2026</sup></a>
+  <a class="back" href="https://marcoliverorfila.es">← Volver al portfolio</a>
+</div>
+
+<main class="wrap">
+  <p class="eyebrow">Diseño web · Ejemplos</p>
+  <h1>Ejemplos de páginas web</h1>
+  <p class="intro">Una muestra de webs para negocios locales, cada una con su propio estilo. Diseñadas para que quien las visita encuentre lo importante en segundos: qué hace el negocio, dónde está y cómo contactar.</p>
+
+  <div class="demos">
+    <a class="demo r" href="restaurante/">
+      <div class="frame"><span class="tag">Restaurante</span><span class="name">Ca'n Fonoll</span></div>
+      <div class="info"><p>Cocina mallorquina de mercado en el centro de Palma: producto local, recetas de siempre y vino de la isla.</p><span class="cta">Ver demo →</span></div>
+    </a>
+    <a class="demo p" href="peluqueria/">
+      <div class="frame"><span class="tag">Peluquería</span><span class="name">Estudio Nara</span></div>
+      <div class="info"><p>Salón de peluquería en Palma: corte, color y tratamientos con cita previa, en un espacio tranquilo.</p><span class="cta">Ver demo →</span></div>
+    </a>
+    <a class="demo t" href="taller/">
+      <div class="frame"><span class="tag">Taller mecánico</span><span class="name">Taller Bennàssar</span></div>
+      <div class="info"><p>Taller mecánico de barrio en Palma: mecánica general, diagnosis, neumáticos y pre-ITV.</p><span class="cta">Ver demo →</span></div>
+    </a>
+  </div>
+
+  <div class="aviso">
+    <p>Estas webs son demostraciones con negocios ficticios. Diseño cada página a medida: estructura, estilo y contenido pensados para tu negocio.</p>
+    <a class="cta" href="https://marcoliverorfila.es/#contact">¿Quieres una así? Hablamos →</a>
+  </div>
+</main>
+
+<footer>
+  <span>Marc Oliver Orfila</span><span>Palma de Mallorca · ES</span><span>© 2026</span>
+</footer>
+
+</body>
+</html>
