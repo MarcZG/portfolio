@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forja Club · Gimnasio y entrenamiento en Madrid</title>
+<meta name="description" content="Forja Club, gimnasio en Madrid: entrenamiento funcional, fuerza, clases dirigidas y entrenadores que se saben tu nombre. Primera semana gratis.">
+<meta property="og:title" content="Forja Club · Gimnasio en Madrid">
+<meta property="og:description" content="Entrenamiento funcional, fuerza y clases dirigidas en Madrid. Primera semana gratis.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--negro:#111214;--panel:#1b1d20;--rojo:#e63946;--gris:#9aa0a6;--blanco:#f5f6f7}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--negro);color:var(--blanco);line-height:1.65}
+h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.25rem;background:rgba(17,18,20,.92);backdrop-filter:blur(6px);border-bottom:1px solid #26282c}
+nav{display:flex;gap:1.25rem;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gris)}
+nav a:hover{color:var(--blanco)}
+.logo{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:1.15rem}
+.logo span{color:var(--rojo)}
+.btn{display:inline-block;padding:.85rem 1.6rem;font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.06em;background:var(--rojo);color:#fff;transition:transform .12s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-linea{background:transparent;border:2px solid #3a3d42}
+.hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;background:linear-gradient(rgba(17,18,20,.55),rgba(17,18,20,.95)),url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop) center/cover no-repeat}
+.hero-inner{max-width:1080px;margin:0 auto;width:100%;padding:7rem 1.25rem 4rem}
+.hero .tag{color:var(--rojo);font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;margin-bottom:.75rem}
+.hero h1{font-size:clamp(3rem,11vw,6rem)}
+.hero p{margin:1.25rem 0 2rem;color:#c9ccd1;max-width:46ch}
+.botones{display:flex;gap:.75rem;flex-wrap:wrap}
+section{padding:4.5rem 1.25rem;max-width:1080px;margin:0 auto}
+.tag{color:var(--rojo);font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;margin-bottom:.75rem}
+h2{font-size:clamp(1.9rem,5.5vw,3rem);margin-bottom:2rem}
+.grid{display:grid;gap:1rem;grid-template-columns:1fr}
+.caja{background:var(--panel);padding:1.7rem;border-top:3px solid var(--rojo)}
+.caja h3{font-size:1.05rem;margin-bottom:.5rem}
+.caja p{font-size:.92rem;color:var(--gris)}
+.sobre{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+.sobre .foto{overflow:hidden;min-height:280px}
+.sobre .foto img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block;filter:saturate(.85)}
+.sobre p{color:var(--gris)}
+.contacto{display:grid;gap:2rem;grid-template-columns:1fr}
+.dato{margin-bottom:1.1rem}
+.dato span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--rojo);font-weight:700;margin-bottom:.2rem}
+.dato a{font-weight:700}
+.mapa{min-height:280px;background:var(--panel);border:1px dashed #3a3d42;display:flex;align-items:center;justify-content:center;color:var(--gris);font-size:.85rem;text-align:center;padding:1rem}
+footer{border-top:1px solid #26282c;text-align:center;padding:2.5rem 1.25rem;color:var(--gris);font-size:.85rem}
+@media(min-width:800px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.sobre{grid-template-columns:1fr 1.1fr}
+.contacto{grid-template-columns:1fr 1.2fr}
+}
+@media(max-width:560px){nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a href="#entrena">Entrena</a>
+<a href="#club">El club</a>
+<a href="#apuntate">Apúntate</a>
+</nav>
+<a class="logo" href="#inicio">Forja <span>Club</span></a>
+</header>
+
+<div class="hero" id="inicio">
+<div class="hero-inner">
+<p class="tag">Gimnasio de barrio · Madrid</p>
+<h1>Entrena en serio</h1>
+<p>Fuerza, funcional y clases dirigidas en grupos pequeños, con entrenadores que se saben tu nombre y tu lesión de la rodilla. Primera semana gratis para que lo compruebes.</p>
+<div class="botones">
+<a class="btn" href="https://wa.me/[TELÉFONO]">Semana de prueba gratis</a>
+<a class="btn btn-linea" href="#entrena">Ver horarios</a>
+</div>
+</div>
+</div>
+
+<section id="entrena">
+<p class="tag">Entrena</p>
+<h2>Lo que hacemos</h2>
+<div class="grid">
+<div class="caja"><h3>Sala de fuerza</h3><p>Barras, discos y racks sin colas. Programaciones de fuerza para todos los niveles.</p></div>
+<div class="caja"><h3>Funcional en grupo</h3><p>Clases de 45 minutos en grupos de máximo 12. Intensidad adaptada, técnica vigilada.</p></div>
+<div class="caja"><h3>Entrenamiento personal</h3><p>Planes a medida para objetivos concretos: perder grasa, ganar músculo o volver de una lesión.</p></div>
+<div class="caja"><h3>Movilidad y espalda sana</h3><p>La clase que tu espalda de oficina lleva años pidiendo. Lunes y jueves.</p></div>
+</div>
+</section>
+
+<section class="sobre" id="club">
+<div>
+<p class="tag">El club</p>
+<h2>Sin postureo, con resultados</h2>
+<p>Forja no es un gimnasio de espejos y selfies: es un club de barrio donde la gente viene a entrenar y acaba quedándose por el ambiente. Grupos pequeños, material cuidado y cero masificación en hora punta, porque limitamos las plazas.</p>
+</div>
+<div class="foto"><img loading="lazy" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1000&auto=format&fit=crop" alt="Sala de entrenamiento del club"></div>
+</section>
+
+<section id="apuntate">
+<p class="tag">Apúntate</p>
+<h2>Ven a probar</h2>
+<div class="contacto">
+<div>
+<div class="dato"><span>Teléfono</span><a href="tel:[TELÉFONO]">[TELÉFONO]</a></div>
+<div class="dato"><span>WhatsApp</span><a href="https://wa.me/[TELÉFONO]">Reserva tu semana gratis</a></div>
+<div class="dato"><span>Dirección</span>[DIRECCIÓN]</div>
+<div class="dato"><span>Horario</span>[HORARIO]</div>
+</div>
+<div class="mapa">Aquí va el iframe de Google Maps</div>
+</div>
+</section>
+
+<footer>Forja Club · [DIRECCIÓN] · Madrid · <a href="tel:[TELÉFONO]">[TELÉFONO]</a></footer>
+
+<!-- Volver a la galería -->
+<style>
+.volver-galeria{position:fixed;left:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:0;
+  height:52px;padding:0 15px;border-radius:100px;background:rgba(20,17,14,.82);color:#F4EFE6;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 8px 24px rgba(0,0,0,.25);
+  font-family:Arial,Helvetica,sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;transition:gap .3s ease,padding .3s ease,background .3s ease;overflow:hidden;white-space:nowrap}
+.volver-galeria svg{width:20px;height:20px;flex:none}
+.volver-galeria span{max-width:0;opacity:0;overflow:hidden;transition:max-width .35s ease,opacity .25s ease}
+.volver-galeria:hover{gap:9px;padding:0 19px;background:rgba(20,17,14,.95)}
+.volver-galeria:hover span{max-width:90px;opacity:1}
+@media (hover:none){.volver-galeria{gap:9px;padding:0 19px}.volver-galeria span{max-width:90px;opacity:1}}
+</style>
+<a class="volver-galeria" href="../" aria-label="Volver a la galería">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span>Galería</span>
+</a>
+</body>
+</html>

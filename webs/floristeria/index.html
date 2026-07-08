@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flors i Fulles · Floristería en Girona</title>
+<meta name="description" content="Flors i Fulles, floristería en Girona: ramos de temporada, flores para bodas y eventos, plantas y entrega a domicilio en el mismo día.">
+<meta property="og:title" content="Flors i Fulles · Floristería en Girona">
+<meta property="og:description" content="Ramos de temporada, bodas, eventos y entrega a domicilio en Girona.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#41543d;--rosa:#d9a7a0;--marfil:#faf7f2;--tinta:#33302b;--gris:#7c766d}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--marfil);color:var(--tinta);line-height:1.7}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;line-height:1.15}
+a{color:inherit;text-decoration:none}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,247,242,.93);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid #eae4da}
+.logo{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--verde)}
+nav{display:flex;gap:1.5rem;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
+nav a{color:var(--gris)}
+nav a:hover{color:var(--verde)}
+.hero{padding:7.5rem 1.5rem 4rem;max-width:1080px;margin:0 auto;display:grid;gap:2.5rem;grid-template-columns:1fr;align-items:center}
+.hero h1{font-size:clamp(2.5rem,8vw,4.2rem);color:var(--verde)}
+.hero h1 em{font-style:italic;color:var(--rosa)}
+.hero p{margin:1.25rem 0 2rem;color:var(--gris);max-width:42ch}
+.btn{display:inline-block;padding:.85rem 1.9rem;background:var(--verde);color:var(--marfil);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;transition:background .2s}
+.btn:hover{background:var(--rosa)}
+.hero .foto{border-radius:200px 200px 16px 16px;overflow:hidden;min-height:340px}
+.hero .foto img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+section{padding:4.5rem 1.5rem;max-width:1080px;margin:0 auto}
+.eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--rosa);margin-bottom:.9rem;font-weight:500}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);color:var(--verde);margin-bottom:2rem}
+.servicios{display:grid;gap:1.25rem;grid-template-columns:1fr}
+.servicio{background:#fff;border:1px solid #eae4da;padding:1.8rem;border-radius:14px}
+.servicio h3{font-size:1.25rem;color:var(--verde);margin-bottom:.5rem}
+.servicio p{font-size:.93rem;color:var(--gris)}
+.sobre{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+.sobre .foto{border-radius:16px;overflow:hidden;min-height:300px}
+.sobre .foto img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block}
+.sobre p{color:var(--gris)}
+.contacto{display:grid;gap:2rem;grid-template-columns:1fr}
+.dato{margin-bottom:1.2rem}
+.dato span{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rosa);margin-bottom:.25rem;font-weight:500}
+.dato a{border-bottom:1px solid #d8cfc2}
+.mapa{min-height:280px;border-radius:16px;background:#f0e9df;border:1px dashed #d8cfc2;display:flex;align-items:center;justify-content:center;color:var(--gris);font-size:.85rem;text-align:center;padding:1rem}
+footer{text-align:center;padding:2.5rem 1.5rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);border-top:1px solid #eae4da}
+@media(min-width:800px){
+.hero{grid-template-columns:1fr .9fr}
+.servicios{grid-template-columns:repeat(3,1fr)}
+.sobre{grid-template-columns:.9fr 1.1fr}
+.contacto{grid-template-columns:1fr 1.2fr}
+}
+@media(max-width:560px){nav a:not(:last-child){display:none}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#inicio">Flors i Fulles</a>
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#taller">El taller</a>
+<a href="#encargos">Encargos</a>
+</nav>
+</header>
+
+<div class="hero" id="inicio">
+<div>
+<h1>Flores que cuentan <em>lo que tú no sabes decir</em></h1>
+<p>Ramos de temporada hechos al momento, flores para bodas y entregas a domicilio en Girona el mismo día. Dinos la ocasión y nosotras ponemos las palabras.</p>
+<a class="btn" href="https://wa.me/[TELÉFONO]">Encargar un ramo</a>
+</div>
+<div class="foto"><img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?q=80&w=1000&auto=format&fit=crop" alt="Ramos de flores a la puerta de la floristería"></div>
+</div>
+
+<section id="servicios">
+<p class="eyebrow">Servicios</p>
+<h2>Lo que hacemos con flores</h2>
+<div class="servicios">
+<div class="servicio"><h3>Ramos de temporada</h3><p>Flor fresca que cambia cada semana según lo que traiga el mercado. Desde 25 €.</p></div>
+<div class="servicio"><h3>Bodas y eventos</h3><p>Del ramo de novia a la decoración completa. Nos reunimos, escuchamos y proponemos.</p></div>
+<div class="servicio"><h3>Entrega a domicilio</h3><p>En Girona y alrededores, el mismo día si nos escribes antes de las 13:00.</p></div>
+</div>
+</section>
+
+<section class="sobre" id="taller">
+<div class="foto"><img loading="lazy" src="https://images.unsplash.com/photo-1531058240690-006c446962d8?q=80&w=1000&auto=format&fit=crop" alt="Floristería preparando un ramo en el taller"></div>
+<div>
+<p class="eyebrow">El taller</p>
+<h2>Flor de proximidad, manos de aquí</h2>
+<p>Trabajamos con productores locales siempre que la temporada lo permite, y cada ramo sale del taller hecho a mano, sin dos iguales. Si no sabes qué regalar, cuéntanos para quién es: acertar es nuestro oficio.</p>
+</div>
+</section>
+
+<section id="encargos">
+<p class="eyebrow">Encargos</p>
+<h2>Pide o pásate a vernos</h2>
+<div class="contacto">
+<div>
+<div class="dato"><span>WhatsApp</span><a href="https://wa.me/[TELÉFONO]">Encarga tu ramo</a></div>
+<div class="dato"><span>Teléfono</span><a href="tel:[TELÉFONO]">[TELÉFONO]</a></div>
+<div class="dato"><span>Dirección</span>[DIRECCIÓN]</div>
+<div class="dato"><span>Horario</span>[HORARIO]</div>
+</div>
+<div class="mapa">Aquí va el iframe de Google Maps</div>
+</div>
+</section>
+
+<footer>Flors i Fulles · Girona · [TELÉFONO]</footer>
+
+<!-- Volver a la galería -->
+<style>
+.volver-galeria{position:fixed;left:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:0;
+  height:52px;padding:0 15px;border-radius:100px;background:rgba(20,17,14,.82);color:#F4EFE6;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 8px 24px rgba(0,0,0,.25);
+  font-family:Arial,Helvetica,sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;transition:gap .3s ease,padding .3s ease,background .3s ease;overflow:hidden;white-space:nowrap}
+.volver-galeria svg{width:20px;height:20px;flex:none}
+.volver-galeria span{max-width:0;opacity:0;overflow:hidden;transition:max-width .35s ease,opacity .25s ease}
+.volver-galeria:hover{gap:9px;padding:0 19px;background:rgba(20,17,14,.95)}
+.volver-galeria:hover span{max-width:90px;opacity:1}
+@media (hover:none){.volver-galeria{gap:9px;padding:0 19px}.volver-galeria span{max-width:90px;opacity:1}}
+</style>
+<a class="volver-galeria" href="../" aria-label="Volver a la galería">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span>Galería</span>
+</a>
+</body>
+</html>

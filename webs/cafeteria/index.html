@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Botánico · Cafetería de especialidad en Sevilla</title>
+<meta name="description" content="Café Botánico, cafetería de especialidad en Sevilla: café de tueste propio, repostería casera y brunch los fines de semana, entre plantas y buena luz.">
+<meta property="og:title" content="Café Botánico · Cafetería de especialidad en Sevilla">
+<meta property="og:description" content="Café de especialidad, repostería casera y brunch en Sevilla.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cafe:#4a3226;--crema:#f7f1e8;--verde:#5e7a52;--tinta:#2e2119;--arena:#e8dccb}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;background:var(--crema);color:var(--tinta);line-height:1.7}
+h1,h2,h3{font-family:'Lora',serif;font-weight:600;line-height:1.15}
+a{color:inherit;text-decoration:none}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--crema);border-bottom:1px solid var(--arena);text-align:center;padding:.8rem 1rem}
+.logo{font-family:'Lora',serif;font-size:1.4rem;color:var(--cafe);display:block}
+header nav{display:flex;justify-content:center;gap:1.5rem;margin-top:.3rem;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--verde)}
+header nav a:hover{color:var(--cafe)}
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr;align-items:end;padding:8rem 1.25rem 0;max-width:1080px;margin:0 auto;gap:2rem}
+.hero h1{font-size:clamp(2.4rem,8vw,4.2rem);color:var(--cafe)}
+.hero h1 em{font-style:italic;color:var(--verde)}
+.hero p{margin:1.25rem 0 2rem;color:#5c4a3c;max-width:44ch}
+.btn{display:inline-block;padding:.85rem 1.7rem;border-radius:999px;background:var(--cafe);color:var(--crema);font-weight:700;font-size:.9rem;transition:background .2s}
+.btn:hover{background:var(--verde)}
+.hero .foto{overflow:hidden;border-radius:18px 18px 0 0;min-height:300px}
+.hero .foto img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block}
+section{padding:4.5rem 1.25rem;max-width:1080px;margin:0 auto}
+.eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--verde);font-weight:700;margin-bottom:.75rem}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);color:var(--cafe);margin-bottom:2rem}
+.cartas{display:grid;gap:1.25rem;grid-template-columns:1fr}
+.carta{background:#fff;border-radius:16px;padding:1.75rem;border:1px solid var(--arena)}
+.carta h3{color:var(--cafe);font-size:1.2rem;margin-bottom:.5rem}
+.carta p{font-size:.93rem;color:#5c4a3c}
+.sobre{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+.sobre .foto{border-radius:18px;overflow:hidden;min-height:280px}
+.sobre .foto img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block}
+.sobre p{color:#5c4a3c}
+.contacto{display:grid;gap:2rem;grid-template-columns:1fr}
+.dato{margin-bottom:1.1rem}
+.dato span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--verde);font-weight:700;margin-bottom:.2rem}
+.dato a{font-weight:700;color:var(--cafe)}
+.mapa{min-height:280px;border-radius:18px;background:var(--arena);border:1px dashed #c8b79f;display:flex;align-items:center;justify-content:center;color:#7a6754;font-size:.85rem;text-align:center;padding:1rem}
+footer{background:var(--cafe);color:#e8dccb;text-align:center;padding:2.5rem 1.25rem;font-size:.85rem}
+@media(min-width:800px){
+.hero{grid-template-columns:1fr 1fr;gap:3rem}
+.cartas{grid-template-columns:repeat(3,1fr)}
+.sobre{grid-template-columns:1.1fr 1fr}
+.contacto{grid-template-columns:1fr 1.2fr}
+}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#inicio">Café Botánico</a>
+<nav>
+<a href="#carta">La carta</a>
+<a href="#casa">La casa</a>
+<a href="#visita">Visítanos</a>
+</nav>
+</header>
+
+<div class="hero" id="inicio">
+<div style="padding-bottom:3rem">
+<h1>Café despacio, <em>entre plantas</em></h1>
+<p>Tueste propio, repostería que sale del horno cada mañana y un patio sevillano con la mejor luz de la ciudad. Ven a quedarte un rato.</p>
+<a class="btn" href="https://wa.me/[TELÉFONO]">Reservar mesa</a>
+</div>
+<div class="foto"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=1200&auto=format&fit=crop" alt="Barra de la cafetería"></div>
+</div>
+
+<section id="carta">
+<p class="eyebrow">La carta</p>
+<h2>Lo que servimos</h2>
+<div class="cartas">
+<div class="carta"><h3>Café de especialidad</h3><p>Espresso, filtrados V60 y cold brew con granos de tueste propio que cambian cada temporada.</p></div>
+<div class="carta"><h3>Repostería casera</h3><p>Tarta de queso al horno, carrot cake y bollería que se acaba antes del mediodía. Avisado quedas.</p></div>
+<div class="carta"><h3>Brunch de fin de semana</h3><p>Huevos, tostas, zumos naturales y tiempo por delante. Sábados y domingos hasta las 14:00.</p></div>
+</div>
+</section>
+
+<section class="sobre" id="casa">
+<div class="foto"><img loading="lazy" src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=1000&auto=format&fit=crop" alt="Interior del café con mesas de madera"></div>
+<div>
+<p class="eyebrow">La casa</p>
+<h2>Un rincón verde en el centro de Sevilla</h2>
+<p>Abrimos Botánico con una idea: que tomarse un café vuelva a ser un momento y no un trámite. Mesas de madera, plantas por todas partes, wifi para quien trabaja y silencio suficiente para quien lee.</p>
+</div>
+</section>
+
+<section id="visita">
+<p class="eyebrow">Visítanos</p>
+<h2>Te esperamos</h2>
+<div class="contacto">
+<div>
+<div class="dato"><span>Teléfono</span><a href="tel:[TELÉFONO]">[TELÉFONO]</a></div>
+<div class="dato"><span>WhatsApp</span><a href="https://wa.me/[TELÉFONO]">Reserva tu mesa</a></div>
+<div class="dato"><span>Dirección</span>[DIRECCIÓN]</div>
+<div class="dato"><span>Horario</span>[HORARIO]</div>
+</div>
+<div class="mapa">Aquí va el iframe de Google Maps</div>
+</div>
+</section>
+
+<footer>Café Botánico · [DIRECCIÓN] · Sevilla · <a href="tel:[TELÉFONO]">[TELÉFONO]</a></footer>
+
+<!-- Volver a la galería -->
+<style>
+.volver-galeria{position:fixed;left:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:0;
+  height:52px;padding:0 15px;border-radius:100px;background:rgba(20,17,14,.82);color:#F4EFE6;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 8px 24px rgba(0,0,0,.25);
+  font-family:Arial,Helvetica,sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;transition:gap .3s ease,padding .3s ease,background .3s ease;overflow:hidden;white-space:nowrap}
+.volver-galeria svg{width:20px;height:20px;flex:none}
+.volver-galeria span{max-width:0;opacity:0;overflow:hidden;transition:max-width .35s ease,opacity .25s ease}
+.volver-galeria:hover{gap:9px;padding:0 19px;background:rgba(20,17,14,.95)}
+.volver-galeria:hover span{max-width:90px;opacity:1}
+@media (hover:none){.volver-galeria{gap:9px;padding:0 19px}.volver-galeria span{max-width:90px;opacity:1}}
+</style>
+<a class="volver-galeria" href="../" aria-label="Volver a la galería">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span>Galería</span>
+</a>
+</body>
+</html>
